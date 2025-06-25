@@ -1,5 +1,7 @@
-// 1. Declare customerName globally and initialize to 'bob'
-let customerName = 'bob';
+// index.js
+
+// 1. Declare customerName globally with var
+var customerName = 'bob';
 
 function returnCustomerName() {
   return customerName;
@@ -10,8 +12,8 @@ function upperCaseCustomerName() {
   customerName = customerName.toUpperCase();
 }
 
-// 3. Declare bestCustomer (undefined initially)
-let bestCustomer;
+// 3. Declare bestCustomer globally with var
+var bestCustomer;
 
 function setBestCustomer() {
   bestCustomer = 'not bob';
@@ -26,6 +28,5 @@ function overwriteBestCustomer() {
 const leastFavoriteCustomer = 'alice';
 
 function changeLeastFavoriteCustomer() {
-  // This line will cause an error because leastFavoriteCustomer is const
-  leastFavoriteCustomer = 'bob';
+  leastFavoriteCustomer = 'bob'; // This will throw an error as expected
 }
